@@ -26,7 +26,21 @@
        <div class="row">
             <div class="col-sm-offset-1 col-sm-10 containingDiv">
                 <h1>Connect to database</h1>
-                      
+                 <?php
+                    // mysqli_connect(localhost, username, password, dbname)
+                    // $link = @mysqli_connect('localhost', 'kannanks_user', 'User@1234', 'kannanks_users') or die('ERROR: Unable to connect: ' . mysqli_connect_error());
+                    // var_dump($link);                 
+                    // echo '<p>Connected successfully to the database.</p>';
+
+                    // connect
+                    $link = new mysqli('localhost', 'kannanks_user', 'User@1234', 'kannanks_users');
+
+                    // check connection
+                    if($link -> connect_errno > 0) {
+                        die("Unable to connect: " . $link -> connect_error);
+                    }
+                    echo '<p>Connected successfully to the database.</p>';
+                 ?>     
             </div>
        </div>
     </div>
