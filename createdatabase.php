@@ -29,7 +29,7 @@
                 <h3>Connect to Server</h3>
                  <?php
                     // mysqli_connect(localhost, username, password, dbname)
-                    $link = @mysqli_connect('localhost', 'kannanks_user', 'User@1234', 'kannanks_users') or die('ERROR: Unable to connect: ' . mysqli_connect_error());
+                    $link = @mysqli_connect("localhost", "id21039441_user", "Janani@1234", "id21039441_users") or die('ERROR: Unable to connect: ' . mysqli_connect_error());
                     var_dump($link);                 
                     echo '<p>Connected successfully to the server.</p>'; 
                  ?>
