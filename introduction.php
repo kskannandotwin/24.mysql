@@ -26,20 +26,45 @@
        <div class="row">
             <div class="col-sm-offset-1 col-sm-10 containingDiv">
                 <h1>Connect to database</h1>
-                 <?php
-                    // mysqli_connect(localhost, username, password, dbname)
-                    // $link = @mysqli_connect('localhost', 'kannanks_user', 'User@1234', 'kannanks_users') or die('ERROR: Unable to connect: ' . mysqli_connect_error());
-                    // var_dump($link);                 
-                    // echo '<p>Connected successfully to the database.</p>';
+                <?php
+                // this is working in https://kannan-fullstack.000webhostapp.com
 
+// $servername = "localhost";
+// $username = "id21039441_user";
+// $password = "Janani@1234";
+// $database = "id21039441_users";
+
+// // Create connection
+// $conn = mysqli_connect($servername, $username, $password, $database);
+
+// // Check connection
+// if (!$conn) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
+
+// echo "Connected successfully";
+?>
+                
+                 <?php
+                    // mysqli_connect(host, username, password, dbname)
+                    // $link = @mysqli_connect("localhost", "id21039441_user", "Janani@1234", "id21039441_users") or die("ERROR: Unable to connect: " . mysqli_connect_error());
+                    // var_dump($link);
+
+                    // // check connection
+                    // if(mysqli_connect_error()) {
+                    //     die("ERROR: Unable to connect: " . mysqli_connect_error());
+                    // }
+                    // echo "<p>Connected successfully to the database.</p>";
+                    
                     // connect
-                    $link = new mysqli('localhost', 'kannanks_user', 'User@1234', 'kannanks_users');
+                    $link = new mysqli("localhost", "id21039441_user", "Janani@1234", "id21039441_users");
 
                     // check connection
                     if($link -> connect_errno > 0) {
                         die("Unable to connect: " . $link -> connect_error);
+                    } else {
+                        echo "<p>Connected successfully to the database.</p>";
                     }
-                    echo '<p>Connected successfully to the database.</p>';
                  ?>     
             </div>
        </div>
